@@ -1,0 +1,47 @@
+{
+    "scopeName": "text.html.htl",
+    "injectionSelector": "L:text.html - (source.js, source.css)",
+    "patterns": [
+        {
+            "name": "meta.embedded.expression.htl",
+            "begin": "\$\{",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.section.embedded.begin.htl"
+                }
+            },
+            "end": "\}",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.embedded.end.htl"
+                }
+            },
+            "patterns": [
+                {
+                    "match": "@\s*[a-zA-Z][\w]*",
+                    "name": "keyword.operator.option.htl"
+                },
+                {
+                    "match": "\b(true|false|null)\b",
+                    "name": "constant.language.boolean.htl"
+                },
+                {
+                    "match": "'[^']*'|\"[^\"]*\"",
+                    "name": "string.quoted.htl"
+                },
+                {
+                    "match": "\b[a-zA-Z_][\w:.-]*\b",
+                    "name": "variable.other.htl"
+                },
+                {
+                    "match": "(?<=\.)[a-zA-Z_][\w-]*",
+                    "name": "entity.name.property.identifier.htl"
+                }
+            ]
+        },
+        {
+            "name": "support.attribute.data-sly",
+            "match": "\bdata-sly-(test|list|repeat|include|resource|use|set|call|template|text|attribute|element|unwrap)\b"
+        }
+    ]
+}

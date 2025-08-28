@@ -1,0 +1,75 @@
+{
+    "data-sly-test": {
+        "prefix": "sly-test",
+        "body": [
+            "<div data-sly-test=\"${${1:condition}}\">$0</div>"
+        ],
+        "description": "Conditional HTL"
+    },
+    "data-sly-attribute": {
+        "prefix": "sly-attribute",
+        "body": [
+            "<${1:tag} data-sly-attribute.${2:attr}=\"${0:value}\"/>"
+        ]
+    },
+    "data-sly-include": {
+        "prefix": "sly-include",
+        "body": [
+            "<sly data-sly-include=\"${0:value}\"/>"
+        ]
+    },
+    "data-sly-set": {
+        "prefix": "sly-set",
+        "body": [
+            "<sly data-sly-set.${1:identifier}=\"${0:value}\"/>"
+        ]
+    },
+    "data-sly-list": {
+        "prefix": "sly-list",
+        "body": [
+            "<ul data-sly-list.${1:item}=\"${2:items}\">",
+            " <li>\\${${1:item}.title}</li>",
+            "</ul>"
+        ],
+        "description": "HTL iteration (list)"
+    },
+    "htl-text-context": {
+        "prefix": "htl-context",
+        "body": [
+            "\\${${1:value} @ context='${2:text}'}"
+        ],
+        "description": "Expression with context"
+    },
+    "data-sly-template": {
+        "prefix": "sly-template",
+        "body": [
+            "<sly data-sly-template.${1:name}=\"${2:args}\">",
+            " $0",
+            "</sly>"
+        ],
+        "description": "Define an HTL template"
+    },
+    "data-sly-call": {
+        "prefix": "sly-call",
+        "body": [
+            "<sly data-sly-call=\"${${1:name} @ ${2:param}='${3:value}'}\"></sly>"
+        ],
+        "description": "Invoce HTL template"
+    },
+    "htl-i18n-text": {
+        "prefix": "htl-i18n",
+        "body": [
+            "\\${'${1:Translatable text}' @ i18n, hint='${2:hint}', locale='${3:en-US}'}"
+        ],
+        "description": "Text with i18n/hint/locale"
+    },
+    "clientlibs-include": {
+        "prefix": "sly-clientlibs",
+        "body": [
+            "<sly data-sly-use.clientlib=\"/libs/granite/sightly/templates/clientlib.html\"></sly>",
+            "<sly data-sly-call=\"${clientlib.css @ categories='${1:app.site}'}\"></sly>",
+            "<sly data-sly-call=\"${clientlib.js @ categories='${1:app.site}'}\"></sly>"
+        ],
+        "description": "Include clientlibs (css/js) with Granite template"
+    }
+}

@@ -1,0 +1,41 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+.pnp.cjs
+
+.vscode/*
+
+.vscode-test
+
+# TypeScript
+*.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment variables
+.env
+.env.*
+
+# Editor-specific
+.idea/ # JetBrains IDEs
+.project # Eclipse
+.classpath # Eclipse
+.settings/ # Eclipse
+*.swp # Vim swap files
+*.bak # Generic backup files
