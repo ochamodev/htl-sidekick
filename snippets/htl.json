@@ -2,9 +2,15 @@
     "data-sly-test": {
         "prefix": "sly-test",
         "body": [
-            "<div data-sly-test=\"${${1:condition}}\">$0</div>"
+            "<${1:tag} data-sly-test=\"${${2:condition}}\">$0</${1:tag}>"
         ],
         "description": "Conditional HTL"
+    },
+    "data-sly-use": {
+        "prefix": "sly-use",
+        "body": [
+            "<sly data-sly-use.${2:identifier}=\"${0:com.model.Class}\"/>"
+        ]
     },
     "data-sly-attribute": {
         "prefix": "sly-attribute",

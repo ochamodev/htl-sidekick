@@ -1,6 +1,6 @@
 {
-    "name": "htl-snippets",
-    "displayName": "htl-snippets",
+    "name": "htl-sidekick",
+    "displayName": "htl-sidekick",
     "description": "Autocomplete and highlight for HTL (Slightly)",
     "version": "0.0.1",
     "license": "MIT",
@@ -16,29 +16,6 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
-        "languages": [
-            {
-                "id": "htl",
-                "aliases": [
-                    "HTL",
-                    "Sightly"
-                ],
-                "extensions": [
-                    ".htl"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "htl",
-                "scopeName": "text.html.htl",
-                "path": "./syntaxes/htl.tmLanguage.json",
-                "injectTo": [
-                    "text.html.basic"
-                ]
-            }
-        ],
         "snippets": [
             {
                 "language": "html",
@@ -62,6 +39,7 @@
     },
     "devDependencies": {
         "@types/vscode": "^1.103.0",
+        "@types/chai": "^4.3.11",
         "@types/mocha": "^10.0.10",
         "@types/node": "22.x",
         "@typescript-eslint/eslint-plugin": "^8.39.0",
@@ -71,6 +49,8 @@
         "npm-run-all": "^4.1.5",
         "typescript": "^5.9.2",
         "@vscode/test-cli": "^0.0.11",
-        "@vscode/test-electron": "^2.5.2"
+        "@vscode/test-electron": "^2.5.2",
+         "chai": "^4.3.10",
+         "mocha": "^10.2.0"
     }
 }
